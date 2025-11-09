@@ -71,7 +71,7 @@
   <link rel="icon" href="https://dvasquec.github.io/otobot/imagenes/oto.png" type="image/png">
 </head>
 <body>
-  <h1>Hola, soy Oto-Bot, tu asistente virtual.</h1>
+  <h1>Hola, soy Oto, tu asistente virtual.</h1>
   <p class="welcome-message">Estoy aquí para ayudarte. ¿Qué necesitas saber hoy?</p>
   <button id="voz"></button>
   <div class="imagen" id="imagen"> 
@@ -79,6 +79,19 @@
   </div>
   <div class="chat-icon"></div>
 
+  <script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "c306adf6-c348-4229-a26d-1f88add483a1", // The ID of this integration.
+    region: "au-syd", // The region your integration is hosted in.
+    serviceInstanceID: "5346e015-9c71-4abc-bcd4-7aabdbfde3fd", // The ID of your service instance.
+    onLoad: async (instance) => { await instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
 
 
 </body>
