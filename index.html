@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Alondra</title>
+  <title>El Chino</title>
   <style>
     body {
       display: flex;
@@ -68,46 +68,18 @@
     }
 
   </style>
-  <link rel="icon" href="https://alondraresponde.000webhostapp.com/imagenes/icon.png" type="image/png">
+  <link rel="icon" href="https://rafaeleor.github.io/Chino/imagenes/4.png" type="image/png">
 </head>
 <body>
-  <h1>Hola, Soy Alondra, tu asistente virtual.</h1>
-  <p class="welcome-message">Hazme las consultas que necesites saber.</p>
+  <h1>Hola, soy Oto-Bot, tu asistente virtual.</h1>
+  <p class="welcome-message">Estoy aquí para ayudarte. ¿Qué necesitas saber hoy?</p>
   <button id="voz"></button>
   <div class="imagen" id="imagen"> 
     <img src="imagenes/CONECTA.png" alt="Conectamos imagen">
   </div>
   <div class="chat-icon"></div>
 
-  <script>
-  // Configura las opciones para el chat de Watson Assistant
-  window.watsonAssistantChatOptions = {
-    // ID de la integración del chat de Watson Assistant.
-    integrationID: "fa7cb014-8dc9-423f-ab99-49226835599c",
-    // Región donde está alojada la integración.
-    region: "au-syd",
-    // ID de la instancia del servicio de Watson Assistant.
-    serviceInstanceID: "292efa88-3f49-4b74-a98d-6d00402d2530",
-    // Función que se ejecuta cuando el chat se ha cargado.
-    onLoad: async (instance) => { 
-      // Renderiza la interfaz del chat.
-      await instance.render(); 
-    }
-  };
 
-  // Establece un temporizador para ejecutar una función después de un retraso.
-  setTimeout(function(){
-    // Crea un elemento de script.
-    const t = document.createElement('script');
-    // Establece la fuente del script para cargar el chat de Watson Assistant.
-    t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + 
-      // Utiliza la versión del cliente especificada en las opciones o la versión 'latest' (más reciente).
-      (window.watsonAssistantChatOptions.clientVersion || 'latest') + 
-      "/WatsonAssistantChatEntry.js";
-    // Agrega el elemento de script al encabezado del documento.
-    document.head.appendChild(t);
-  });
-</script>
 
 </body>
 </html>
